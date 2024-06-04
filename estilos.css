@@ -1,91 +1,97 @@
+:root {
+    --azul:#002265;
+    --azul-claro:#608AF5;
+    --cinza-escuro:#212121;
+    --largura-site: 1173px;
+    --altura-header:150px;
+}
+
 body {
+    margin: 0;
+    padding: 0;
     font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    color: #212121;
 }
 
 
 header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    max-width: 1173px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: var(--largura-site);
+    margin: 0 auto;
+    height: var(--altura-header);
 }
 
 .logo-site {
-    color:#002265;
-    padding-top: 10px;
-    font-size: 25px;
+    font-size: 2rem;
+    color:var(--azul);
 }
 
-.navegacao {
+nav {
     display: flex;
-    gap: 50px;
+    gap: 3rem;
 }
 
-.navegacao ul {
-    display: flex;
+nav ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
-    gap:30px;
+    display: flex;
     align-items: center;
+    gap: 2rem;
 }
 
-
-.navegacao ul a {
-    color: #212121;
+nav ul a {
+    color: var(--cinza-escuro);
     text-decoration: none;
-    display: block;
-    padding: 10px;
-    font-size: 25px;
 }
 
-.navegacao .botao a {
-    background-color: #608AF5;
+nav .botao {
+    background-color: var(--azul-claro);
     color:white;
     text-decoration: none;
     display: block;
-    padding: 15px 35px;
     border-radius: 10px;
+    padding: 1rem 2rem;
 }
 
-
 #sobre {
-    margin-left: auto;
-    margin-right: auto;
+    max-width: var(--largura-site);
+    min-height: calc(100dvh - var(--altura-header));
+    margin: 0 auto;
     display: flex;
-    max-width: 1173px;
+    align-items: center;
+    gap: 2rem;
 }
 
 #sobre > div {
     flex-grow: 1;
     flex-shrink: 1;
-}
-
-#sobre .coluna-1 {
+    flex-basis: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#sobre .coluna-2 {
-    flex-basis: 80%;
+#sobre > div:last-child {
+    flex-basis: 70%;
 }
 
-#sobre .coluna-2 img {
+#sobre img {
     width: 100%;
-}
-
-.text-inicial {
-    color: #002265;
-    font-size: 35px;;
+    height: 100%;
 }
 
 #sobre h1 {
     font-size: 50px;
     color: #002265;
+    margin: 1rem 0;
+}
+#sobre p {
+    margin: 1rem 0;
 }
 
-#sobre p {
-    font-size: 23px;
+.texto-azul {
+    color: var(--azul);
 }
